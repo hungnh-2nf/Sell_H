@@ -1,0 +1,33 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "Login H",
+  "version": "1",
+
+  // Recommended
+  "description": "Auto sell v2",
+  "icons": { "16": "login.png",
+           "48": "login.png",
+          "128": "login.png" },
+
+  // Optional
+  "author":"Kule",
+
+  "browser_action": {
+          "default_icon": {                    // optional
+            "16": "login.png",           // optional
+            "24": "login.png",           // optional
+            "32": "login.png"            // optional
+          },
+          "default_title": "Login H",      // optional; shown in tooltip
+          "default_popup": "popup.html"        // optional
+        },
+
+    "content_scripts": [
+      {
+      "matches": ["*://hextracoin.co/log*"],
+      "js": ["jquery.js", "login.js"]
+      }
+    ]
+
+}

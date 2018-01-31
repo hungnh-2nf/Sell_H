@@ -1,0 +1,33 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "dashboard go to exchange",
+  "version": "1",
+
+  // Recommended
+  "description": "dashboard",
+  "icons": { "16": "dashboard.png",
+           "48": "dashboard.png",
+          "128": "dashboard.png" },
+
+  // Optional
+  "author":"Kule",
+
+  "browser_action": {
+          "default_icon": {                    // optional
+            "16": "dashboard.png",           // optional
+            "24": "dashboard.png",           // optional
+            "32": "dashboard.png"            // optional
+          },
+          "default_title": "dashboard go to exchange",      // optional; shown in tooltip
+          "default_popup": "popup.html"        // optional
+        },
+
+    "content_scripts": [
+      {
+      "matches": ["*://hextracoin.co/dashboard"],
+      "js": ["jquery.js","dashboard.js"]
+      }
+    ]
+
+}

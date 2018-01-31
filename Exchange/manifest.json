@@ -1,0 +1,33 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "Auto sell",
+  "version": "1",
+
+  // Recommended
+  "description": "Auto sell",
+  "icons": { "16": "exchange.png",
+           "48": "exchange.png",
+          "128": "exchange.png" },
+
+  // Optional
+  "author":"Kule",
+
+  "browser_action": {
+          "default_icon": {                    // optional
+            "16": "exchange.png",           // optional
+            "24": "exchange.png",           // optional
+            "32": "exchange.png"            // optional
+          },
+          "default_title": "Auto sell",      // optional; shown in tooltip
+          "default_popup": "popup.html"        // optional
+        },
+
+    "content_scripts": [
+      {
+      "matches": ["*://hextracoin.co/exchange*"],
+      "js": ["jquery.js", "sell.js"]
+      }
+    ]
+
+}
